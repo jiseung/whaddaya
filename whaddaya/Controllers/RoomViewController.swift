@@ -22,8 +22,7 @@ class RoomViewController: UIViewController {
         print("function reached")
         if self.room == nil {
             print(self.user)
-            self.room = Room(owner: self.user)
-            backend.addRoom(room: self.room)
+            self.room = Room(owner: self.user, handle: backend.generateRoomHandle())
         } else {
             print("room is not nil")
         }
@@ -36,6 +35,7 @@ class RoomViewController: UIViewController {
         
         roomView.backButton.addTarget(self, action: #selector(backTapped(_:)), for: .touchUpInside)
         roomView.editButton.addTarget(self, action: #selector(editTapped(_:)), for: .touchUpInside)
+        roomView.publishButton.addTarget(self, action: #selector(publishTapped(_:)), for: .touchUpInside)
         editView.backButton.addTarget(self, action: #selector(backEditTapped(_:)), for: .touchUpInside)
     }
     
@@ -49,9 +49,17 @@ class RoomViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         if (room.owner != user) {
+            //user
             roomView.editButton.isHidden = true
+            roomView.publishButton.isHidden = true
+            roomView.voteListButton.isHidden = true
             roomView.titleTextField.isUserInteractionEnabled = false
             roomView.descriptionTextView.isUserInteractionEnabled = false
+        } else {
+            //owner
+            roomView.contactButton.isHidden = true
+            roomView.voteListPreviewButton.isHidden = true
+            roomView.voteButton.isHidden = true
         }
     }
     
@@ -78,6 +86,13 @@ class RoomViewController: UIViewController {
             print("finished")
             self.editView.backButton.isHidden = false
         })
+    }
+    
+    @objc func publishTapped(_ button: UIButton) {
+        print("clicked on publish")
+        
+        backend.addRoom(room: room)
+        self.navigationController?.popViewController(animated: false)
     }
     
     @objc func backEditTapped(_ button: UIButton) {

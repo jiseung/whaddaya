@@ -11,15 +11,17 @@ import Foundation
 class Room {
     let handle: String
     let owner: String
+    let title: String
     let adminList: [(Privilege, String)]
     let voterList: [String]
     let interval: DateInterval?
     let voteList: [Vote]
     let voteItemList: [VoteItem]
     
-    init(owner: String) {
-        handle = Util.generateCode(numChar: 5)
+    init(owner: String, handle: String) {
+        self.handle = handle
         self.owner = owner
+        self.title = ""
         self.adminList = [(.owner, owner)]
         self.voterList = []
         self.interval = nil

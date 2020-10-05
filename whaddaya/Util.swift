@@ -9,7 +9,7 @@
 import Foundation
 
 class Util {
-    static func generateCode(numChar: Int)  -> String {
-        return "ABCDE"
+    static func generateCode(numChar: Int, letters: String)  -> String {
+        return String((0..<numChar).map{ _ in letters.randomElement()! })
     }
 }

@@ -15,9 +15,13 @@ class RoomView: UIView {
     let backButton = Button(title: "back", size: 20)
     let handleLabel = UILabel()
     let editButton = Button(title: "edit", size: 20)
+    let contactButton = Button(title: "Contact", size: 20)
     let titleTextField = UITextField()
     let descriptionTextView = UITextView()
+    let voteListButton = Button(title: "Vote List", size: 20)
+    let voteListPreviewButton = Button(title: "Preview Vote List", size: 20)
     let voteButton = Button(title: "VOTE", size: 30)
+    let publishButton = Button(title: "PUBLISH", size: 30)
     let voteStatement = UILabel()
     
     required init?(coder: NSCoder) {
@@ -37,6 +41,7 @@ class RoomView: UIView {
         handleLabel.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(handleLabel)
         self.addSubview(editButton)
+        self.addSubview(contactButton)
         titleTextField.placeholder = "Title goes here"
         titleTextField.font = UIFont.systemFont(ofSize: 30, weight: .medium)
         titleTextField.translatesAutoresizingMaskIntoConstraints = false
@@ -46,7 +51,10 @@ class RoomView: UIView {
         descriptionTextView.font = UIFont.systemFont(ofSize: 20)
         descriptionTextView.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(descriptionTextView)
+        self.addSubview(voteListButton)
+        self.addSubview(voteListPreviewButton)
         self.addSubview(voteButton)
+        self.addSubview(publishButton)
         voteStatement.text = "Voting ends in ..."
         voteStatement.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(voteStatement)
@@ -58,18 +66,23 @@ class RoomView: UIView {
             //backButton
             backButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: width*0.05),
             backButton.topAnchor.constraint(equalTo: self.topAnchor, constant: height*0.05),
-            backButton.widthAnchor.constraint(lessThanOrEqualTo: self.widthAnchor, multiplier: 0.2),
-            backButton.heightAnchor.constraint(lessThanOrEqualTo: self.heightAnchor, multiplier: 0.2),
+            backButton.widthAnchor.constraint(equalToConstant: backButton.intrinsicContentSize.width),
+            backButton.heightAnchor.constraint(equalToConstant: backButton.intrinsicContentSize.height),
             //handleLabel
             handleLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             handleLabel.centerYAnchor.constraint(equalTo: backButton.centerYAnchor),
-            handleLabel.widthAnchor.constraint(lessThanOrEqualTo: self.widthAnchor, multiplier: 0.8),
-            handleLabel.heightAnchor.constraint(lessThanOrEqualTo: self.heightAnchor, multiplier: 0.2),
+            handleLabel.widthAnchor.constraint(equalToConstant: handleLabel.intrinsicContentSize.width),
+            handleLabel.heightAnchor.constraint(equalToConstant: handleLabel.intrinsicContentSize.height),
             //editButton
-            editButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -width*0.05),
+            editButton.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -width*0.05),
             editButton.topAnchor.constraint(equalTo: self.topAnchor, constant: height*0.05),
-            editButton.widthAnchor.constraint(lessThanOrEqualTo: self.widthAnchor, multiplier: 0.2),
-            editButton.heightAnchor.constraint(lessThanOrEqualTo: self.heightAnchor, multiplier: 0.2),
+            editButton.widthAnchor.constraint(equalToConstant: editButton.intrinsicContentSize.width),
+            editButton.heightAnchor.constraint(equalToConstant: editButton.intrinsicContentSize.height),
+            //contactButton
+            contactButton.rightAnchor.constraint(equalTo: editButton.rightAnchor),
+            contactButton.topAnchor.constraint(equalTo: editButton.topAnchor),
+            contactButton.widthAnchor.constraint(equalToConstant: contactButton.intrinsicContentSize.width),
+            contactButton.heightAnchor.constraint(equalToConstant: contactButton.intrinsicContentSize.height),
             //titleTextField
             titleTextField.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             titleTextField.topAnchor.constraint(equalTo: handleLabel.bottomAnchor, constant: 10),
@@ -83,13 +96,28 @@ class RoomView: UIView {
             //voteStatement
             voteStatement.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             voteStatement.bottomAnchor.constraint(equalTo: self.layoutMarginsGuide.bottomAnchor),
-            voteStatement.widthAnchor.constraint(lessThanOrEqualTo: self.widthAnchor, multiplier: 0.9),
-            voteStatement.heightAnchor.constraint(lessThanOrEqualTo: self.heightAnchor, multiplier: 0.05),
+            voteStatement.widthAnchor.constraint(equalToConstant: voteStatement.intrinsicContentSize.width),
+            voteStatement.heightAnchor.constraint(equalToConstant: voteStatement.intrinsicContentSize.height),
             //voteButton
             voteButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             voteButton.topAnchor.constraint(equalTo: self.bottomAnchor, constant: -height*0.15),
-            voteButton.widthAnchor.constraint(equalTo: self.widthAnchor, multiplier: 0.4),
-            voteButton.bottomAnchor.constraint(equalTo: voteStatement.topAnchor, constant: -5)
+            voteButton.widthAnchor.constraint(equalToConstant: voteButton.intrinsicContentSize.width),
+            voteButton.heightAnchor.constraint(equalToConstant: voteButton.intrinsicContentSize.height),
+            //publishButton
+            publishButton.centerXAnchor.constraint(equalTo: voteButton.centerXAnchor),
+            publishButton.centerYAnchor.constraint(equalTo: voteButton.centerYAnchor),
+            publishButton.widthAnchor.constraint(equalToConstant: publishButton.intrinsicContentSize.width),
+            publishButton.heightAnchor.constraint(equalToConstant: publishButton.intrinsicContentSize.height),
+            //voteListButton
+            voteListButton.bottomAnchor.constraint(equalTo: voteButton.topAnchor, constant: -height*0.15),
+            voteListButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            voteListButton.widthAnchor.constraint(equalToConstant: voteListButton.intrinsicContentSize.width),
+            voteListButton.heightAnchor.constraint(equalToConstant: voteListButton.intrinsicContentSize.height),
+            //voteListPreviewButton
+            voteListPreviewButton.centerXAnchor.constraint(equalTo: voteListButton.centerXAnchor),
+            voteListPreviewButton.centerYAnchor.constraint(equalTo: voteListButton.centerYAnchor),
+            voteListPreviewButton.widthAnchor.constraint(equalToConstant: voteListPreviewButton.intrinsicContentSize.width),
+            voteListPreviewButton.heightAnchor.constraint(equalToConstant: voteListPreviewButton.intrinsicContentSize.height)
         ]
         
         NSLayoutConstraint.activate(constraints)

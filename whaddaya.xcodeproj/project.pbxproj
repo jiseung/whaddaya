@@ -20,10 +20,15 @@
 		980075F525140D3E001662D1 /* Say.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980075F425140D3E001662D1 /* Say.swift */; };
 		980075F725140D7D001662D1 /* VoteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980075F625140D7D001662D1 /* VoteItem.swift */; };
 		980075F9251441F6001662D1 /* Backend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980075F8251441F6001662D1 /* Backend.swift */; };
+		980075FB251D70C7001662D1 /* JoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980075FA251D70C7001662D1 /* JoinView.swift */; };
+		980075FD25228A9D001662D1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980075FC25228A9D001662D1 /* User.swift */; };
+		980075FF2523B4EE001662D1 /* EditItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980075FE2523B4EE001662D1 /* EditItemView.swift */; };
 		9881A6862291A9E900A12942 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9881A6852291A9E900A12942 /* AppDelegate.swift */; };
 		9881A6882291A9E900A12942 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9881A6872291A9E900A12942 /* HomeViewController.swift */; };
 		9881A68D2291A9EA00A12942 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9881A68C2291A9EA00A12942 /* Assets.xcassets */; };
 		9881A69B2291A9EA00A12942 /* whaddayaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9881A69A2291A9EA00A12942 /* whaddayaTests.swift */; };
+		988D70F0252B9F53009811F0 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988D70EF252B9F53009811F0 /* ItemViewController.swift */; };
+		988D70F2252BA029009811F0 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988D70F1252BA029009811F0 /* ItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +55,9 @@
 		980075F425140D3E001662D1 /* Say.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Say.swift; sourceTree = "<group>"; };
 		980075F625140D7D001662D1 /* VoteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteItem.swift; sourceTree = "<group>"; };
 		980075F8251441F6001662D1 /* Backend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Backend.swift; sourceTree = "<group>"; };
+		980075FA251D70C7001662D1 /* JoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinView.swift; sourceTree = "<group>"; };
+		980075FC25228A9D001662D1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		980075FE2523B4EE001662D1 /* EditItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemView.swift; sourceTree = "<group>"; };
 		9881A6822291A9E900A12942 /* whaddaya.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = whaddaya.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9881A6852291A9E900A12942 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9881A6872291A9E900A12942 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +66,8 @@
 		9881A6962291A9EA00A12942 /* whaddayaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = whaddayaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9881A69A2291A9EA00A12942 /* whaddayaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whaddayaTests.swift; sourceTree = "<group>"; };
 		9881A69C2291A9EA00A12942 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		988D70EF252B9F53009811F0 /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
+		988D70F1252BA029009811F0 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				980075E825114D3D001662D1 /* Room.swift */,
+				980075FC25228A9D001662D1 /* User.swift */,
 				980075F225140C5D001662D1 /* Vote.swift */,
 				980075F625140D7D001662D1 /* VoteItem.swift */,
 				980075F425140D3E001662D1 /* Say.swift */,
@@ -96,6 +107,9 @@
 				980075DD250FFAEE001662D1 /* HomeView.swift */,
 				980075E325112679001662D1 /* RoomView.swift */,
 				980075EE2513D99A001662D1 /* EditRoomView.swift */,
+				980075FA251D70C7001662D1 /* JoinView.swift */,
+				988D70F1252BA029009811F0 /* ItemView.swift */,
+				980075FE2523B4EE001662D1 /* EditItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -106,6 +120,7 @@
 				9881A6872291A9E900A12942 /* HomeViewController.swift */,
 				980075DF25108533001662D1 /* NavigationViewController.swift */,
 				980075E125108577001662D1 /* RoomViewController.swift */,
+				988D70EF252B9F53009811F0 /* ItemViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -263,11 +278,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				980075F9251441F6001662D1 /* Backend.swift in Sources */,
+				980075FF2523B4EE001662D1 /* EditItemView.swift in Sources */,
 				980075E725112999001662D1 /* Button.swift in Sources */,
+				988D70F2252BA029009811F0 /* ItemView.swift in Sources */,
 				980075EB251286FD001662D1 /* Util.swift in Sources */,
 				980075F325140C5D001662D1 /* Vote.swift in Sources */,
+				980075FB251D70C7001662D1 /* JoinView.swift in Sources */,
 				980075EF2513D99A001662D1 /* EditRoomView.swift in Sources */,
 				980075E025108533001662D1 /* NavigationViewController.swift in Sources */,
+				980075FD25228A9D001662D1 /* User.swift in Sources */,
+				988D70F0252B9F53009811F0 /* ItemViewController.swift in Sources */,
 				980075E925114D3D001662D1 /* Room.swift in Sources */,
 				980075F725140D7D001662D1 /* VoteItem.swift in Sources */,
 				980075F125140565001662D1 /* Privilege.swift in Sources */,
