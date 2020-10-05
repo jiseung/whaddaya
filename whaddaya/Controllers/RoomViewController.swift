@@ -55,11 +55,13 @@ class RoomViewController: UIViewController {
             roomView.voteListButton.isHidden = true
             roomView.titleTextField.isUserInteractionEnabled = false
             roomView.descriptionTextView.isUserInteractionEnabled = false
+            roomView.voteTypeButton.isHidden = true
         } else {
             //owner
             roomView.contactButton.isHidden = true
             roomView.voteListPreviewButton.isHidden = true
             roomView.voteButton.isHidden = true
+            roomView.voteTypeLabel.isHidden = true
         }
     }
     
