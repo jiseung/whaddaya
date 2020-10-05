@@ -29,6 +29,7 @@
 		9881A69B2291A9EA00A12942 /* whaddayaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9881A69A2291A9EA00A12942 /* whaddayaTests.swift */; };
 		988D70F0252B9F53009811F0 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988D70EF252B9F53009811F0 /* ItemViewController.swift */; };
 		988D70F2252BA029009811F0 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988D70F1252BA029009811F0 /* ItemView.swift */; };
+		988D70F4252BA751009811F0 /* VoteType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988D70F3252BA751009811F0 /* VoteType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		9881A69C2291A9EA00A12942 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		988D70EF252B9F53009811F0 /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		988D70F1252BA029009811F0 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
+		988D70F3252BA751009811F0 /* VoteType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				980075E825114D3D001662D1 /* Room.swift */,
+				988D70F3252BA751009811F0 /* VoteType.swift */,
 				980075FC25228A9D001662D1 /* User.swift */,
 				980075F225140C5D001662D1 /* Vote.swift */,
 				980075F625140D7D001662D1 /* VoteItem.swift */,
@@ -281,6 +284,7 @@
 				980075FF2523B4EE001662D1 /* EditItemView.swift in Sources */,
 				980075E725112999001662D1 /* Button.swift in Sources */,
 				988D70F2252BA029009811F0 /* ItemView.swift in Sources */,
+				988D70F4252BA751009811F0 /* VoteType.swift in Sources */,
 				980075EB251286FD001662D1 /* Util.swift in Sources */,
 				980075F325140C5D001662D1 /* Vote.swift in Sources */,
 				980075FB251D70C7001662D1 /* JoinView.swift in Sources */,

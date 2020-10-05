@@ -17,6 +17,7 @@ class Room {
     let interval: DateInterval?
     let voteList: [Vote]
     let voteItemList: [VoteItem]
+    let voteType: VoteType
     
     init(owner: String, handle: String) {
         self.handle = handle
@@ -27,5 +28,6 @@ class Room {
         self.interval = nil
         self.voteList = []
         self.voteItemList = []
+        self.voteType = .Tournament
     }
 }

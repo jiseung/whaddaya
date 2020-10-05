@@ -20,6 +20,8 @@ class RoomView: UIView {
     let descriptionTextView = UITextView()
     let voteListButton = Button(title: "Vote List", size: 20)
     let voteListPreviewButton = Button(title: "Preview Vote List", size: 20)
+    let voteTypeButton = Button(title: "Vote Type", size: 20)
+    let voteTypeLabel = UILabel()
     let voteButton = Button(title: "VOTE", size: 30)
     let publishButton = Button(title: "PUBLISH", size: 30)
     let voteStatement = UILabel()
@@ -53,6 +55,10 @@ class RoomView: UIView {
         self.addSubview(descriptionTextView)
         self.addSubview(voteListButton)
         self.addSubview(voteListPreviewButton)
+        self.addSubview(voteTypeButton)
+        voteTypeLabel.text = "Vote type label" //TODO
+        voteTypeLabel.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(voteTypeLabel)
         self.addSubview(voteButton)
         self.addSubview(publishButton)
         voteStatement.text = "Voting ends in ..."
@@ -117,7 +123,17 @@ class RoomView: UIView {
             voteListPreviewButton.centerXAnchor.constraint(equalTo: voteListButton.centerXAnchor),
             voteListPreviewButton.centerYAnchor.constraint(equalTo: voteListButton.centerYAnchor),
             voteListPreviewButton.widthAnchor.constraint(equalToConstant: voteListPreviewButton.intrinsicContentSize.width),
-            voteListPreviewButton.heightAnchor.constraint(equalToConstant: voteListPreviewButton.intrinsicContentSize.height)
+            voteListPreviewButton.heightAnchor.constraint(equalToConstant: voteListPreviewButton.intrinsicContentSize.height),
+            //voteTypeButton
+            voteTypeButton.centerXAnchor.constraint(equalTo: voteListButton.centerXAnchor),
+            voteTypeButton.topAnchor.constraint(equalTo: voteListButton.bottomAnchor, constant: height*0.05),
+            voteTypeButton.widthAnchor.constraint(equalToConstant: voteTypeButton.intrinsicContentSize.width),
+            voteTypeButton.heightAnchor.constraint(equalToConstant: voteTypeButton.intrinsicContentSize.height),
+            //voteTypeLabel
+            voteTypeLabel.centerXAnchor.constraint(equalTo: voteTypeButton.centerXAnchor),
+            voteTypeLabel.centerYAnchor.constraint(equalTo: voteTypeButton.centerYAnchor),
+            voteTypeLabel.widthAnchor.constraint(equalToConstant: voteTypeLabel.intrinsicContentSize.width),
+            voteTypeLabel.heightAnchor.constraint(equalToConstant: voteTypeLabel.intrinsicContentSize.height)
         ]
         
         NSLayoutConstraint.activate(constraints)
