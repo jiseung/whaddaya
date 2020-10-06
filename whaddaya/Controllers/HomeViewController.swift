@@ -30,6 +30,7 @@ class HomeViewController: UIViewController {
         joinView.frame = CGRect(x: 0, y: 0, width: self.view.bounds.width*0.8, height: self.view.bounds.height*0.6)
         joinView.center = CGPoint(x: self.view.frame.size.width/2, y: self.view.frame.size.height/2)
         joinView.handleField.delegate = self
+        joinView.roomTableView.delegate = self
         joinView.roomTableView.dataSource = self
         joinView.roomTableView.register(UITableViewCell.self, forCellReuseIdentifier: "roomCell")
         self.view.addSubview(joinView)
@@ -37,8 +38,10 @@ class HomeViewController: UIViewController {
         
         homeView.createButton.addTarget(self, action: #selector(createTapped(_:)), for: .touchUpInside)
         homeView.joinButton.addTarget(self, action: #selector(joinTapped(_:)), for: .touchUpInside)
+        joinView.goButton.addTarget(self, action: #selector(goTapped(_:)), for: .touchUpInside)
         
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+        tapRecognizer.cancelsTouchesInView = false
         view.addGestureRecognizer(tapRecognizer)
     }
     
@@ -68,11 +71,8 @@ class HomeViewController: UIViewController {
     }
     
     @objc func handleTap(_ gestureRecognizer: UITapGestureRecognizer) {
-        print("tap working")
-        
         if joinView.isHidden == false {
             let tapPoint = gestureRecognizer.location(in: homeView)
-            print(gestureRecognizer.location(in: homeView))
             let xmin = joinView.frame.minX
             let xmax = joinView.frame.maxX
             let ymin = joinView.frame.minY
@@ -81,6 +81,22 @@ class HomeViewController: UIViewController {
             if !inside {
                 joinView.isHidden = true
             }
+        }
+    }
+    
+    @objc func goTapped(_ button: UIButton) {
+        print("clicked on go")
+        
+        if let handle = joinView.handleField.text {
+            if let room = backend.searchRoom(handle: handle) {
+                let roomViewController = RoomViewController()
+                roomViewController.room = room
+                navigationController?.pushViewController(roomViewController, animated: false)
+            } else {
+                print("Room not found")
+            }
+        } else {
+            print("Invalid code")
         }
     }
 }
@@ -100,7 +116,7 @@ extension HomeViewController: UITextFieldDelegate {
     }
 }
 
-extension HomeViewController: UITableViewDataSource {  //, UITableViewDelegate {
+extension HomeViewController: UITableViewDataSource, UITableViewDelegate {  //, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "roomCell", for: indexPath)
         cell.textLabel?.text = backend.room[indexPath.row].handle
@@ -111,5 +127,13 @@ extension HomeViewController: UITableViewDataSource {  //, UITableViewDelegate {
         print("room count:")
         print(backend.room.count)
         return backend.room.count
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("select row:")
+        if let cellLabel = joinView.roomTableView.cellForRow(at: indexPath)?.textLabel?.text {
+            joinView.handleField.text = cellLabel
+            print(cellLabel)
+        }
     }
 }

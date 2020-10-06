@@ -35,6 +35,8 @@ class RoomViewController: UIViewController {
         
         roomView.backButton.addTarget(self, action: #selector(backTapped(_:)), for: .touchUpInside)
         roomView.editButton.addTarget(self, action: #selector(editTapped(_:)), for: .touchUpInside)
+        roomView.voteListButton.addTarget(self, action: #selector(voteListTapped(_:)), for: .touchUpInside)
+        roomView.voteTypeButton.addTarget(self, action: #selector(voteTypeTapped(_:)), for: .touchUpInside)
         roomView.publishButton.addTarget(self, action: #selector(publishTapped(_:)), for: .touchUpInside)
         editView.backButton.addTarget(self, action: #selector(backEditTapped(_:)), for: .touchUpInside)
     }
@@ -88,6 +90,18 @@ class RoomViewController: UIViewController {
             print("finished")
             self.editView.backButton.isHidden = false
         })
+    }
+    
+    @objc func voteListTapped(_ button: UIButton) {
+        print("clicked on votelist")
+        
+        let itemViewController = ItemViewController()
+        self.navigationController?.pushViewController(itemViewController, animated: false)
+    }
+    
+    @objc func voteTypeTapped(_ button: UIButton) {
+        print("clicked on votetype")
+        //todo
     }
     
     @objc func publishTapped(_ button: UIButton) {

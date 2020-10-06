@@ -23,6 +23,7 @@ class ItemViewController: UIViewController {
         super.viewDidLoad()
         self.view.addSubview(itemView)
         self.view.addSubview(editItemView)
+        editItemView.isHidden = true
     }
     
     init() {
