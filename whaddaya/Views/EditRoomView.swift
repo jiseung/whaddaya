@@ -16,6 +16,7 @@ class EditRoomView: UIView {
     let privilegeStatement = UILabel()
     let voteItemButton = Button(title: "Vote Items", size: 18)
     let peopleButton = Button(title: "People", size: 18)
+    let unpublishButton = Button(title: "Unpublish Room", size: 18)
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -36,6 +37,7 @@ class EditRoomView: UIView {
         self.addSubview(privilegeStatement)
         self.addSubview(voteItemButton)
         self.addSubview(peopleButton)
+        self.addSubview(unpublishButton)
         
         let width = self.bounds.size.width
         let height = self.bounds.size.height
@@ -59,7 +61,12 @@ class EditRoomView: UIView {
             peopleButton.leftAnchor.constraint(equalTo: voteItemButton.leftAnchor),
             peopleButton.topAnchor.constraint(equalTo: voteItemButton.bottomAnchor, constant: 10),
             peopleButton.widthAnchor.constraint(lessThanOrEqualToConstant: width*0.5),
-            peopleButton.heightAnchor.constraint(lessThanOrEqualTo: self.heightAnchor, multiplier: 0.2)
+            peopleButton.heightAnchor.constraint(lessThanOrEqualTo: self.heightAnchor, multiplier: 0.2),
+            //unpublishButton
+            unpublishButton.leftAnchor.constraint(equalTo: peopleButton.leftAnchor),
+            unpublishButton.topAnchor.constraint(equalTo: peopleButton.bottomAnchor, constant: 10),
+            unpublishButton.widthAnchor.constraint(equalToConstant: unpublishButton.intrinsicContentSize.width),
+            unpublishButton.heightAnchor.constraint(equalToConstant: unpublishButton.intrinsicContentSize.height)
         ]
         
         NSLayoutConstraint.activate(constraints)

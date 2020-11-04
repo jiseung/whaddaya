@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class JoinView: UIView {
+class JoinView: PopoverView {
     let viewController: HomeViewController
     
     let handleField = UITextField()
@@ -23,16 +23,8 @@ class JoinView: UIView {
     
     init(viewController: HomeViewController) {
         self.viewController = viewController
-        super.init(frame: UIScreen.main.bounds)
-        
-        self.backgroundColor = .white
-        self.layer.borderColor = UIColor.gray.cgColor
-        self.layer.borderWidth = 3
-        self.layer.cornerRadius = 30
-        self.layer.shadowColor = UIColor.darkGray.cgColor
-        self.layer.shadowRadius = 5
-        self.layer.shadowOpacity = 0.5
-        
+        super.init(superView: viewController.view)
+    
         handleField.placeholder = "Search/Join"
         handleField.font = UIFont.systemFont(ofSize: 20)
         handleField.translatesAutoresizingMaskIntoConstraints = false

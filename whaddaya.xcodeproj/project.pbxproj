@@ -23,6 +23,8 @@
 		980075FB251D70C7001662D1 /* JoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980075FA251D70C7001662D1 /* JoinView.swift */; };
 		980075FD25228A9D001662D1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980075FC25228A9D001662D1 /* User.swift */; };
 		980075FF2523B4EE001662D1 /* EditItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980075FE2523B4EE001662D1 /* EditItemView.swift */; };
+		9819B594255322BC0074B8A2 /* ContactView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9819B593255322BC0074B8A2 /* ContactView.swift */; };
+		9819B596255326AE0074B8A2 /* PopoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9819B595255326AE0074B8A2 /* PopoverView.swift */; };
 		9881A6862291A9E900A12942 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9881A6852291A9E900A12942 /* AppDelegate.swift */; };
 		9881A6882291A9E900A12942 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9881A6872291A9E900A12942 /* HomeViewController.swift */; };
 		9881A68D2291A9EA00A12942 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9881A68C2291A9EA00A12942 /* Assets.xcassets */; };
@@ -30,6 +32,8 @@
 		988D70F0252B9F53009811F0 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988D70EF252B9F53009811F0 /* ItemViewController.swift */; };
 		988D70F2252BA029009811F0 /* ItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988D70F1252BA029009811F0 /* ItemView.swift */; };
 		988D70F4252BA751009811F0 /* VoteType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988D70F3252BA751009811F0 /* VoteType.swift */; };
+		988D70F62530CB1D009811F0 /* VoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988D70F52530CB1D009811F0 /* VoteViewController.swift */; };
+		988D70F82530CB87009811F0 /* VoteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988D70F72530CB87009811F0 /* VoteView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +63,8 @@
 		980075FA251D70C7001662D1 /* JoinView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinView.swift; sourceTree = "<group>"; };
 		980075FC25228A9D001662D1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		980075FE2523B4EE001662D1 /* EditItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditItemView.swift; sourceTree = "<group>"; };
+		9819B593255322BC0074B8A2 /* ContactView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactView.swift; sourceTree = "<group>"; };
+		9819B595255326AE0074B8A2 /* PopoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopoverView.swift; sourceTree = "<group>"; };
 		9881A6822291A9E900A12942 /* whaddaya.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = whaddaya.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9881A6852291A9E900A12942 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9881A6872291A9E900A12942 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +76,8 @@
 		988D70EF252B9F53009811F0 /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
 		988D70F1252BA029009811F0 /* ItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemView.swift; sourceTree = "<group>"; };
 		988D70F3252BA751009811F0 /* VoteType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteType.swift; sourceTree = "<group>"; };
+		988D70F52530CB1D009811F0 /* VoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteViewController.swift; sourceTree = "<group>"; };
+		988D70F72530CB87009811F0 /* VoteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +121,8 @@
 				980075FA251D70C7001662D1 /* JoinView.swift */,
 				988D70F1252BA029009811F0 /* ItemView.swift */,
 				980075FE2523B4EE001662D1 /* EditItemView.swift */,
+				988D70F72530CB87009811F0 /* VoteView.swift */,
+				9819B593255322BC0074B8A2 /* ContactView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -124,6 +134,7 @@
 				9881A6872291A9E900A12942 /* HomeViewController.swift */,
 				980075E125108577001662D1 /* RoomViewController.swift */,
 				988D70EF252B9F53009811F0 /* ItemViewController.swift */,
+				988D70F52530CB1D009811F0 /* VoteViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -132,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				980075E625112999001662D1 /* Button.swift */,
+				9819B595255326AE0074B8A2 /* PopoverView.swift */,
 			);
 			path = Wrappers;
 			sourceTree = "<group>";
@@ -284,6 +296,7 @@
 				980075FF2523B4EE001662D1 /* EditItemView.swift in Sources */,
 				980075E725112999001662D1 /* Button.swift in Sources */,
 				988D70F2252BA029009811F0 /* ItemView.swift in Sources */,
+				988D70F82530CB87009811F0 /* VoteView.swift in Sources */,
 				988D70F4252BA751009811F0 /* VoteType.swift in Sources */,
 				980075EB251286FD001662D1 /* Util.swift in Sources */,
 				980075F325140C5D001662D1 /* Vote.swift in Sources */,
@@ -298,8 +311,11 @@
 				980075F525140D3E001662D1 /* Say.swift in Sources */,
 				980075DE250FFAEE001662D1 /* HomeView.swift in Sources */,
 				9881A6882291A9E900A12942 /* HomeViewController.swift in Sources */,
+				9819B594255322BC0074B8A2 /* ContactView.swift in Sources */,
+				988D70F62530CB1D009811F0 /* VoteViewController.swift in Sources */,
 				980075E425112679001662D1 /* RoomView.swift in Sources */,
 				980075E225108577001662D1 /* RoomViewController.swift in Sources */,
+				9819B596255326AE0074B8A2 /* PopoverView.swift in Sources */,
 				9881A6862291A9E900A12942 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,7 +14,6 @@ class ItemViewController: UIViewController {
     var itemView: ItemView!
     var editItemView: EditItemView!
 
-
     override func viewDidLoad() {
         
         itemView = ItemView(viewController: self)
