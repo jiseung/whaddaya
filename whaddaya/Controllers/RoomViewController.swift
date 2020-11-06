@@ -115,14 +115,14 @@ class RoomViewController: UIViewController {
     @objc func contactTapped(_ button: UIButton) {
         print("clicked on contact")
         
-        //TODO contact view todo
+        contactView.isHidden = false
     }
     
     @objc func voteListTapped(_ button: UIButton) {
         print("clicked on votelist")
         
-        let itemViewController = ItemViewController()
-        self.navigationController?.pushViewController(itemViewController, animated: false)
+        let itemCollectionViewController = ItemCollectionViewController()
+        self.navigationController?.pushViewController(itemCollectionViewController, animated: false)
     }
     
     @objc func voteTypeTapped(_ button: UIButton) {

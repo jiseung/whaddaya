@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 class EditItemView: UIView {
-    let viewController: ItemViewController
+    let viewController: ItemCollectionViewController
     
     let handleField = UITextField()
     let goButton = Button(title: "GO", size: 20)
@@ -21,7 +21,7 @@ class EditItemView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init(viewController: ItemViewController) {
+    init(viewController: ItemCollectionViewController) {
         self.viewController = viewController
         super.init(frame: UIScreen.main.bounds)
         

@@ -1,5 +1,5 @@
 //
-//  ItemView.swift
+//  ItemCollectionView.swift
 //  whaddaya
 //
 //  Created by jiseung on 10/5/20.
@@ -9,20 +9,17 @@
 import Foundation
 import UIKit
 
-class ItemView: UIView {
-    let viewController: ItemViewController
+class ItemCollectionView: UICollectionView {
+    let viewController: ItemCollectionViewController
     
-    let handleField = UITextField()
-    let goButton = Button(title: "GO", size: 20)
-    
-    let roomTableView = UITableView()
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init(viewController: ItemViewController) {
+    init(viewController: ItemCollectionViewController) {
         self.viewController = viewController
-        super.init(frame: UIScreen.main.bounds)
+        let layout = UICollectionViewLayout()
+        super.init(frame: UIScreen.main.bounds, collectionViewLayout: layout)
     }
 }

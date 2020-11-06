@@ -1,5 +1,5 @@
 //
-//  ItemViewController.swift
+//  ItemCollectionViewController.swift
 //  whaddaya
 //
 //  Created by jiseung on 10/5/20.
@@ -9,18 +9,18 @@
 import Foundation
 import UIKit
 
-class ItemViewController: UIViewController {
+class ItemCollectionViewController: UIViewController {
 
-    var itemView: ItemView!
+    var itemCollectionView: ItemCollectionView!
     var editItemView: EditItemView!
 
     override func viewDidLoad() {
         
-        itemView = ItemView(viewController: self)
+        itemCollectionView = ItemCollectionView(viewController: self)
         editItemView = EditItemView(viewController: self)
         
         super.viewDidLoad()
-        self.view.addSubview(itemView)
+        self.view.addSubview(itemCollectionView)
         self.view.addSubview(editItemView)
         editItemView.isHidden = true
     }
