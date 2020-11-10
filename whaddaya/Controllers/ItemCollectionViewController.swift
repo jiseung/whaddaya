@@ -15,8 +15,13 @@ class ItemCollectionViewController: UIViewController {
     var editItemView: EditItemView!
 
     override func viewDidLoad() {
-        
         itemCollectionView = ItemCollectionView(viewController: self)
+        itemCollectionView.collectionView.delegate = self
+        itemCollectionView.collectionView.dataSource = self
+        itemCollectionView.collectionView.backgroundColor = .red
+        itemCollectionView.collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "collectionCell")
+        itemCollectionView.collectionView.reloadData()
+        
         editItemView = EditItemView(viewController: self)
         
         super.viewDidLoad()
@@ -34,5 +39,30 @@ class ItemCollectionViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+    }
+}
+
+extension ItemCollectionViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        print("hello")
+        return 15
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        print("hello1")
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath)
+        cell.backgroundColor = .green
+        return cell
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        print("hello11")
+        return CGSize(width: 5, height: 5)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        print("hello111")
+        return UIEdgeInsets(top: 5, left: 5, bottom: 5, right: 5)
     }
 }
