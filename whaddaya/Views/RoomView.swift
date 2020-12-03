@@ -34,40 +34,40 @@ class RoomView: UIView {
         self.viewController = viewController
         super.init(frame: UIScreen.main.bounds)
         
-        self.backgroundColor = .white
+        backgroundColor = .white
         
-        self.addSubview(backButton)
+        addSubview(backButton)
         handleLabel.text = viewController.room.handle
         handleLabel.textColor = .purple
         handleLabel.font = UIFont.systemFont(ofSize: 30, weight: .medium)
         handleLabel.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(handleLabel)
-        self.addSubview(editButton)
-        self.addSubview(contactButton)
+        addSubview(handleLabel)
+        addSubview(editButton)
+        addSubview(contactButton)
         titleTextField.placeholder = "Title goes here"
         titleTextField.font = UIFont.systemFont(ofSize: 30, weight: .medium)
         titleTextField.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(titleTextField)
+        addSubview(titleTextField)
         descriptionTextView.text = "Description goes here"
         descriptionTextView.textColor = .gray
         descriptionTextView.font = UIFont.systemFont(ofSize: 20)
         descriptionTextView.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(descriptionTextView)
-        self.addSubview(voteListButton)
-        self.addSubview(voteListPreviewButton)
-        self.addSubview(voteTypeButton)
+        addSubview(descriptionTextView)
+        addSubview(voteListButton)
+        addSubview(voteListPreviewButton)
+        addSubview(voteTypeButton)
         voteTypeLabel.text = "Vote type label" //TODO
         voteTypeLabel.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(voteTypeLabel)
-        self.addSubview(voteButton)
-        self.addSubview(publishButton)
+        addSubview(voteTypeLabel)
+        addSubview(voteButton)
+        addSubview(publishButton)
         voteStatement.text = "Voting ends in ..."
         voteStatement.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(voteStatement)
+        addSubview(voteStatement)
         
         
-        let width = self.bounds.size.width
-        let height = self.bounds.size.height
+        let width = bounds.size.width
+        let height = bounds.size.height
         let constraints = [
             //backButton
             backButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: width*0.05),

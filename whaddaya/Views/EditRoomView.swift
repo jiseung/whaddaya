@@ -26,21 +26,21 @@ class EditRoomView: UIView {
         self.viewController = viewController
         super.init(frame: UIScreen.main.bounds)
         
-        self.backgroundColor = .lightGray
+        backgroundColor = .lightGray
         
         backButton.isHidden = true
-        self.addSubview(backButton)
+        addSubview(backButton)
         privilegeStatement.isHidden = true
         privilegeStatement.font = UIFont.systemFont(ofSize: 14)
         privilegeStatement.textColor = .red
         privilegeStatement.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(privilegeStatement)
-        self.addSubview(voteItemButton)
-        self.addSubview(peopleButton)
-        self.addSubview(unpublishButton)
+        addSubview(privilegeStatement)
+        addSubview(voteItemButton)
+        addSubview(peopleButton)
+        addSubview(unpublishButton)
         
-        let width = self.bounds.size.width
-        let height = self.bounds.size.height
+        let width = bounds.size.width
+        let height = bounds.size.height
         let constraints = [
             //backButton
             backButton.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: width*0.05),

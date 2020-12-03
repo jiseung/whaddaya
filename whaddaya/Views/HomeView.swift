@@ -25,15 +25,15 @@ class HomeView: UIView {
         self.viewController = viewController
         super.init(frame: UIScreen.main.bounds)
         
-        self.backgroundColor = .white
+        backgroundColor = .white
         
-        self.addSubview(createButton)
-        self.addSubview(joinButton)
+        addSubview(createButton)
+        addSubview(joinButton)
         userLabel.text = "User: @"
         userLabel.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(userLabel)
+        addSubview(userLabel)
         userTextField.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(userTextField)
+        addSubview(userTextField)
         
         let constraints = [
             //createButton

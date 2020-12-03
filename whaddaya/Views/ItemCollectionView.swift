@@ -30,16 +30,16 @@ class ItemCollectionView: UIView {
         
         super.init(frame: UIScreen.main.bounds)
         
-        self.backgroundColor = .white
+        backgroundColor = .white
         
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(titleLabel)
-        self.addSubview(addButton)
+        addSubview(titleLabel)
+        addSubview(addButton)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(collectionView)
+        addSubview(collectionView)
         
-        let width = self.bounds.size.width
-        let height = self.bounds.size.height
+        let width = bounds.size.width
+        let height = bounds.size.height
         let constraints = [
             //titleLabel
             titleLabel.centerYAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 0.05*height),

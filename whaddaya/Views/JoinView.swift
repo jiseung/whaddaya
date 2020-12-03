@@ -28,13 +28,13 @@ class JoinView: PopoverView {
         handleField.placeholder = "Search/Join"
         handleField.font = UIFont.systemFont(ofSize: 20)
         handleField.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(handleField)
-        self.addSubview(goButton)
+        addSubview(handleField)
+        addSubview(goButton)
         roomTableView.translatesAutoresizingMaskIntoConstraints = false
         self.addSubview(roomTableView)
         
-        let width = self.bounds.size.width
-        let height = self.bounds.size.height
+        let width = bounds.size.width
+        let height = bounds.size.height
         let constraints = [
             //handleField
             handleField.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),

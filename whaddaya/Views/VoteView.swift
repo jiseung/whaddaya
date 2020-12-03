@@ -20,6 +20,6 @@ class VoteView: UIView {
         self.viewController = viewController
         super.init(frame: UIScreen.main.bounds)
         
-        self.backgroundColor = .white
+        backgroundColor = .white
     }
 }
