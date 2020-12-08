@@ -121,8 +121,8 @@ class RoomViewController: UIViewController {
     @objc func voteListTapped(_ button: UIButton) {
         print("clicked on votelist")
         
-        let itemCollectionViewController = ItemCollectionViewController()
-        self.navigationController?.pushViewController(itemCollectionViewController, animated: false)
+        let voteListViewController = VoteListViewController()
+        self.navigationController?.pushViewController(voteListViewController, animated: false)
     }
     
     @objc func voteTypeTapped(_ button: UIButton) {

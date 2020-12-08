@@ -28,6 +28,8 @@ class ItemCollectionViewController: UIViewController {
         self.view.addSubview(itemCollectionView)
         self.view.addSubview(editItemView)
         editItemView.isHidden = true
+        
+        itemCollectionView.backButton.addTarget(self, action: #selector(backTapped(_:)), for: .touchUpInside)
     }
     
     init() {
@@ -39,6 +41,12 @@ class ItemCollectionViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+    }
+    
+    @objc func backTapped(_ button: UIButton) {
+        print("clicked on back")
+
+        self.navigationController?.popViewController(animated: false)
     }
 }
 

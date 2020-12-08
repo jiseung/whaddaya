@@ -14,6 +14,7 @@ class ItemCollectionView: UIView {
     
     let titleLabel = UILabel()
     let addButton = Button(title: "add", size: 20)
+    let backButton = Button(title: "back", size: 20)
     
     let collectionView: UICollectionView
     
@@ -32,9 +33,11 @@ class ItemCollectionView: UIView {
         
         backgroundColor = .white
         
+        titleLabel.textAlignment = .center
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         addSubview(titleLabel)
         addSubview(addButton)
+        addSubview(backButton)
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(collectionView)
         
@@ -44,13 +47,18 @@ class ItemCollectionView: UIView {
             //titleLabel
             titleLabel.centerYAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor, constant: 0.05*height),
             titleLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            titleLabel.widthAnchor.constraint(equalToConstant: titleLabel.intrinsicContentSize.width),
-            titleLabel.heightAnchor.constraint(equalToConstant: titleLabel.intrinsicContentSize.height),
+            titleLabel.widthAnchor.constraint(equalTo: self.widthAnchor),
+            titleLabel.heightAnchor.constraint(equalToConstant: 20),
             //addButton
             addButton.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -width*0.05),
             addButton.centerYAnchor.constraint(equalTo: titleLabel.centerYAnchor),
             addButton.widthAnchor.constraint(equalToConstant: addButton.intrinsicContentSize.width),
             addButton.heightAnchor.constraint(equalToConstant: addButton.intrinsicContentSize.height),
+            //backButton
+            backButton.leftAnchor.constraint(equalTo: self.leftAnchor, constant: width*0.05),
+            backButton.centerYAnchor.constraint(equalTo: addButton.centerYAnchor),
+            backButton.widthAnchor.constraint(equalToConstant: backButton.intrinsicContentSize.width),
+            backButton.heightAnchor.constraint(equalToConstant: backButton.intrinsicContentSize.height),
             //collectionView
             collectionView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             collectionView.widthAnchor.constraint(equalTo: self.widthAnchor),

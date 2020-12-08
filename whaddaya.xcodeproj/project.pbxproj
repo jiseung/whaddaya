@@ -29,6 +29,7 @@
 		9881A6882291A9E900A12942 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9881A6872291A9E900A12942 /* HomeViewController.swift */; };
 		9881A68D2291A9EA00A12942 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9881A68C2291A9EA00A12942 /* Assets.xcassets */; };
 		9881A69B2291A9EA00A12942 /* whaddayaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9881A69A2291A9EA00A12942 /* whaddayaTests.swift */; };
+		9883435B2580030B00DF1CD7 /* VoteListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9883435A2580030B00DF1CD7 /* VoteListViewController.swift */; };
 		988D70F0252B9F53009811F0 /* ItemCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988D70EF252B9F53009811F0 /* ItemCollectionViewController.swift */; };
 		988D70F2252BA029009811F0 /* ItemCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988D70F1252BA029009811F0 /* ItemCollectionView.swift */; };
 		988D70F4252BA751009811F0 /* VoteType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988D70F3252BA751009811F0 /* VoteType.swift */; };
@@ -73,6 +74,7 @@
 		9881A6962291A9EA00A12942 /* whaddayaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = whaddayaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9881A69A2291A9EA00A12942 /* whaddayaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = whaddayaTests.swift; sourceTree = "<group>"; };
 		9881A69C2291A9EA00A12942 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9883435A2580030B00DF1CD7 /* VoteListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteListViewController.swift; sourceTree = "<group>"; };
 		988D70EF252B9F53009811F0 /* ItemCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewController.swift; sourceTree = "<group>"; };
 		988D70F1252BA029009811F0 /* ItemCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionView.swift; sourceTree = "<group>"; };
 		988D70F3252BA751009811F0 /* VoteType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoteType.swift; sourceTree = "<group>"; };
@@ -119,7 +121,6 @@
 				980075E325112679001662D1 /* RoomView.swift */,
 				980075EE2513D99A001662D1 /* EditRoomView.swift */,
 				980075FA251D70C7001662D1 /* JoinView.swift */,
-				988D70F1252BA029009811F0 /* ItemCollectionView.swift */,
 				980075FE2523B4EE001662D1 /* EditItemView.swift */,
 				988D70F72530CB87009811F0 /* VoteView.swift */,
 				9819B593255322BC0074B8A2 /* ContactView.swift */,
@@ -133,7 +134,7 @@
 				980075DF25108533001662D1 /* NavigationViewController.swift */,
 				9881A6872291A9E900A12942 /* HomeViewController.swift */,
 				980075E125108577001662D1 /* RoomViewController.swift */,
-				988D70EF252B9F53009811F0 /* ItemCollectionViewController.swift */,
+				9883435A2580030B00DF1CD7 /* VoteListViewController.swift */,
 				988D70F52530CB1D009811F0 /* VoteViewController.swift */,
 			);
 			path = Controllers;
@@ -144,6 +145,8 @@
 			children = (
 				980075E625112999001662D1 /* Button.swift */,
 				9819B595255326AE0074B8A2 /* PopoverView.swift */,
+				988D70F1252BA029009811F0 /* ItemCollectionView.swift */,
+				988D70EF252B9F53009811F0 /* ItemCollectionViewController.swift */,
 			);
 			path = Wrappers;
 			sourceTree = "<group>";
@@ -294,6 +297,7 @@
 			files = (
 				980075F9251441F6001662D1 /* Backend.swift in Sources */,
 				980075FF2523B4EE001662D1 /* EditItemView.swift in Sources */,
+				9883435B2580030B00DF1CD7 /* VoteListViewController.swift in Sources */,
 				980075E725112999001662D1 /* Button.swift in Sources */,
 				988D70F2252BA029009811F0 /* ItemCollectionView.swift in Sources */,
 				988D70F82530CB87009811F0 /* VoteView.swift in Sources */,
